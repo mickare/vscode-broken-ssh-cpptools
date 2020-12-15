@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux gcc",
+            "includePath": [
+                "${workspaceFolder}/include"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ],
+                "databaseFilename": "${workspaceFolder}/.vscode/vscode-cpptools/browse.vc.db",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

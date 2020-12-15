@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+      args: 
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    user: "${USER_UID:-1000}:${USER_GID:-1000}"
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
+        consistency: delegated
+      # Volume: bash history
+      - ws-bashhistory:/home/vscode/.bash_history
+      # Volume: Avoiding extension reinstalls on container rebuild
+      - ws-extension:/home/vscode/.vscode-server/extensions
+      # Volume: And/or for VS Code Insiders
+      - ws-extension-insiders:/home/vscode/.vscode-server-insiders/extensions
+    # [Optional] Required for ptrace-based debuggers like C++, Go, and Rust
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      WORKSPACE_ROOT: /workspace
+    tty: true
+
+volumes:
+  ws-bashhistory:
+  ws-extension:
+  ws-extension-insiders:

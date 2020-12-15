@@ -1,0 +1,12 @@
+{
+    // "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.default.cppStandard": "gnu++17",
+    "C_Cpp.intelliSenseEngineFallback": "Disabled",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.intelliSenseCachePath": ".vscode/vscode-cpptools",
+    "files.associations": {
+        "string": "cpp"
+    },
+}
