@@ -4,7 +4,7 @@
     "C_Cpp.default.cppStandard": "gnu++17",
     "C_Cpp.intelliSenseEngineFallback": "Disabled",
     "C_Cpp.intelliSenseEngine": "Default",
-    "C_Cpp.intelliSenseCachePath": ".vscode/vscode-cpptools",
+    "C_Cpp.intelliSenseCachePath": "${workspaceFolder}/.vscode/vscode-cpptools",
     "files.associations": {
         "string": "cpp"
     },
